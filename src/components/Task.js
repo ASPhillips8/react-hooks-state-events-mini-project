@@ -1,6 +1,5 @@
 import React  from "react";
 
-
 function Task({text, category, onHandleTaskDelete}) {
 
   function handleDelete() {

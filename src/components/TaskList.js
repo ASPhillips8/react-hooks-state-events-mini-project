@@ -3,7 +3,9 @@ import Task from "./Task";
 
 function TaskList({tasks}) {
   const [taskList, setTaskList] = useState(tasks)
-  console.log(taskList)
+  // const [selectCategory, setSelectCategory] = useState("All")
+
+  // console.log("tasklist", selectCategory)
 
   function handleTaskDelete(taskText) {
     const updatedTasks = taskList.filter((task) => task.text !== taskText)
