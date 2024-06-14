@@ -15,11 +15,15 @@ function App() {
   ? taskList.filter(task => task.category === selectedCategory)
   : taskList;
 
+  function handleTaskFormSubmit(newTask){
+    setTaskList([...taskList, newTask])
+  }
+
   return (
     <div className="App">
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
-      <NewTaskForm categories={CATEGORIES}/>
+      <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={handleTaskFormSubmit}/>
       <TaskList tasks={filteredTasks} setTaskList={setTaskList}/>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function NewTaskForm({categories}) {
+function NewTaskForm({categories, onTaskFormSubmit}) {
   const [details, setDetails] = useState("")
   const [categoryOption, setCategoryOption] = useState(categories[0])
 
@@ -18,8 +18,7 @@ function NewTaskForm({categories}) {
       text: details,
       category: categoryOption
     }
-    console.log(newTask)
-
+    onTaskFormSubmit(newTask)
   }
 
   const selectedCategories = categories.slice(1).map((category) => {
