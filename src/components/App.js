@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
-      <NewTaskForm />
-      <TaskList tasks={filteredTasks} taskList={taskList} setTaskList={setTaskList}/>
+      <NewTaskForm categories={CATEGORIES}/>
+      <TaskList tasks={filteredTasks} setTaskList={setTaskList}/>
     </div>
   );
 }
