@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 function CategoryFilter({categories, selectedCategory, setSelectedCategory }) {
   function handleCategorySelect (category) {

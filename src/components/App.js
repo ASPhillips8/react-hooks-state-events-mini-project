@@ -4,8 +4,6 @@ import NewTaskForm from "./NewTaskForm";
 import TaskList from "./TaskList";
 
 import { CATEGORIES, TASKS } from "../data";
-console.log("working with", { CATEGORIES, TASKS });
-
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState ("All")
